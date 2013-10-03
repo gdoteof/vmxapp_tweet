@@ -5,7 +5,6 @@ VMX.callback = function(detections){
   var now = new Date().getTime();
   if(detections[0].score > 1){
     if(!last_invoked || now > last_invoked + 5000){   //do this a max of once every 5 seconds
-      //The message, roughly formatted as postmarkapp wants it
       var msg = {
           tweet:  "@vmxrobotics found something named " + detections[0].cls,
           image_data: VMX.getSnapshot(),
@@ -13,7 +12,7 @@ VMX.callback = function(detections){
       last_invoked = new Date().getTime();
 
       //USE ANGULAR MODULES!  
-      //could also be $.post(...) (jquery works as well)
+      //could also be $http.post(...) (jquery works as well)
       $.post(url,msg).success(function(response){
         console.log("success!",response);
       }).error(function(response){
