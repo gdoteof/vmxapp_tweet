@@ -1,5 +1,5 @@
 var last_invoked = 0;
-var url =  "http://localhost/v/tweet.php";
+var url =  "tweet.php";
 VMX.callback = function(detections){
   // a local script for sending a tweet
   var now = new Date().getTime();
