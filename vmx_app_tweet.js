@@ -1,3 +1,4 @@
+debugger;
 var last_invoked = 0;
 var url =  "tweet.php";
 VMX.callback = function(detections){
