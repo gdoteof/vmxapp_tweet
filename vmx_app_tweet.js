@@ -1,4 +1,3 @@
-debugger;
 var last_invoked = 0;
 var url =  "tweet.php";
 VMX.callback = function(detections){
@@ -14,7 +13,7 @@ VMX.callback = function(detections){
 
       //USE ANGULAR MODULES!  
       //could also be $http.post(...) (jquery works as well)
-      $.post(url,msg).success(function(response){
+      jQuery.post(url,msg).success(function(response){
         console.log("success!",response);
       }).error(function(response){
         console.log("error", response); 
