@@ -6,7 +6,7 @@ VMX.callback = function(detections){
   if(detections[0].score > 1){
     if(!last_invoked || now > last_invoked + 5000){   //do this a max of once every 5 seconds
       var msg = {
-          tweet:  "@vmxrobotics found something named " + detections[0].cls,
+          tweet:  "@quantombone found something named " + detections[0].cls,
           image_data: VMX.getSnapshot(),
         }
       last_invoked = new Date().getTime();
